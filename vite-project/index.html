@@ -7,6 +7,29 @@
     <script src="https://accounts.google.com/gsi/client" async defer></script>
     <script src="https://apis.google.com/js/api:client.js"></script>
     <script src="https://apis.google.com/js/api.js"></script>
+    <!-- Add this inside the <head> section of your index.html file -->
+<!-- Load Facebook SDK -->
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '556049333914536',   // Replace with your Facebook App ID
+      cookie     : true,             // Enable cookies to allow the server to access the session
+      xfbml      : true,             // Parse social plugins on this page
+      version    : 'v12.0'           // Correct SDK version
+    });
+  };
+
+  // Loading the SDK script asynchronously
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "https://connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
     <title>Vite + React</title>
   </head>
   <body>

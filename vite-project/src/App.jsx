@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import FacebookLoginComponent from './components/FacebookLoginComponent';
 
 const App = () => {
   const [user, setUser] = useState(null);
@@ -61,6 +62,7 @@ const App = () => {
           <p>Gender: {user.gender}</p>
         </div>
       )}
+      <FacebookLoginComponent/>
     </div>
   );
 };
